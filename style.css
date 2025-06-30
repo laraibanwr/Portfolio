@@ -1,6 +1,5 @@
-/* GENERAL */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/* GENERAL STYLES */
+@import url("[https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap)");
 
 * {
   margin: 0;
@@ -9,6 +8,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text color */
 }
 
 html {
@@ -16,18 +17,16 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: #b0b0b0; /* Lighter grey for paragraphs */
 }
 
-/* TRANSITION */
-
+/* TRANSITION EFFECTS */
 a,
 .action-button {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
-
+/* DESKTOP NAVIGATION */
 nav,
 .nav-links {
   display: flex;
@@ -46,28 +45,28 @@ nav {
 }
 
 a {
-  color: black;
+  color: #e0e0e0; /* Light text for links */
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: transparent; /* Initially transparent */
 }
 
 a:hover {
-  color: grey;
+  color: #888; /* Slightly darker grey on hover */
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: #555; /* Darker underline on hover */
 }
 
 .logo {
   font-size: 2rem;
+  color: #e0e0e0; /* Light text for logo */
 }
 
 .logo:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
-
+/* HAMBURGER/MOBILE MENU */
 #mobile-navigation {
   display: none;
 }
@@ -89,7 +88,7 @@ a:hover {
 .menu-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: #e0e0e0; /* White lines for hamburger icon */
 }
 
 @keyframes fadeIn {
@@ -105,19 +104,18 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: #333; /* Dark background for mobile menu */
   width: fit-content;
   max-height: 0;
   overflow: hidden;
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
 .mobile-menu-links.open {
-  /* Increased max-height to ensure all links are visible */
-  max-height: 400px; /* Adjusted from 300px to 400px */
+  max-height: 400px;
   opacity: 1;
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -127,18 +125,13 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: #e0e0e0; /* Light text for mobile menu links */
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
 
 .mobile-menu-links li {
   list-style: none;
-}
-
-/* This rule is redundant with the one above, but keeping for consistency if it was intended to override something */
-.mobile-menu-links.open {
-  max-height: 400px; /* Ensure consistency with the primary rule */
 }
 
 .menu-icon.open span:first-child {
@@ -165,8 +158,7 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
-
+/* SECTIONS LAYOUT */
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -180,7 +172,6 @@ section {
 }
 
 /* PROFILE SECTION */
-
 #profile-section {
   display: flex;
   justify-content: center;
@@ -206,16 +197,21 @@ section {
 
 .greeting-text {
   text-align: center;
+  margin-bottom: 10px;
+  color: #b0b0b0; /* Lighter grey for greeting text */
 }
 
 .role-text {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  color: #b0b0b0; /* Lighter grey for role text */
 }
 
 .title {
   font-size: 3rem;
+  margin-bottom: 5px;
   text-align: center;
+  color: #e0e0e0; /* Light text for titles */
 }
 
 #social-links-container {
@@ -226,14 +222,17 @@ section {
 }
 
 /* ICONS */
-
 .utility-icon {
   cursor: pointer;
   height: 2rem;
+  filter: invert(1); /* Invert black icons to white */
+}
+
+.no-invert {
+  filter: none; /* Do not invert specific images */
 }
 
 /* BUTTONS */
-
 .button-group {
   display: flex;
   justify-content: center;
@@ -250,7 +249,7 @@ section {
 
 .primary-button,
 .secondary-button {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: #555 0.1rem solid; /* Darker border for buttons */
 }
 
 .primary-button:hover,
@@ -260,30 +259,32 @@ section {
 
 .primary-button,
 .secondary-button:hover {
-  background: rgb(173, 169, 169);
-  color: white;
+  background: #555; /* Darker background on hover */
+  color: #e0e0e0; /* Light text on hover */
   border: none;
 }
 
 .primary-button {
-  background: rgb(53, 53, 53);
-  color: white;
+  background: #444; /* Dark background for primary button */
+  color: #e0e0e0; /* Light text for primary button */
   border: none;
 }
 
 .primary-button:hover {
-  background: rgb(173, 169, 169);
-  color: black;
-  border: rgb(255, 255, 255) 0.1rem solid;
+  background: #777; /* Lighter dark background on hover */
+  color: #1a1a1a; /* Dark text on hover */
+  border: #e0e0e0 0.1rem solid; /* Light border on hover */
 }
 
+/* Fix for Resume button text color on mobile */
 .secondary-button {
   background: none;
+  color: #e0e0e0; /* Light text for secondary button */
 }
 
 .secondary-button:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
-
+  border: #e0e0e0 0.1rem solid; /* Light border on hover */
+  color: #e0e0e0; /* Light text on hover */
 }
 
 .button-group {
@@ -291,7 +292,6 @@ section {
 }
 
 /* ABOUT SECTION */
-
 #about-section {
   position: relative;
 }
@@ -325,11 +325,20 @@ section {
 .info-card {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: #2a2a2a; /* Darker background for info cards */
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: #555 0.1rem solid; /* Darker border */
+  border-color: #555; /* Darker border color */
   text-align: center;
+  color: #e0e0e0; /* Light text for info cards */
+}
+
+.info-card h3 {
+  color: #e0e0e0; /* Light text for headings in info cards */
+}
+
+.info-card p {
+  color: #b0b0b0; /* Lighter grey for paragraphs in info cards */
 }
 
 .section-container {
@@ -344,16 +353,20 @@ section {
 }
 
 /* SKILLS SECTION */
-
 #skills-section {
   position: relative;
 }
 
 .section-subtitle {
-  color: rgb(85, 85, 85);
+  color: #b0b0b0; /* Lighter grey for subtitles */
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
+}
+
+#skills-container {
+  margin-top: 7px;
+  margin-bottom: 10px;
 }
 
 .skills-details-wrapper {
@@ -378,97 +391,87 @@ article {
   gap: 0.5rem;
 }
 
+.info-card article h3 {
+  font-size: 1rem;
+}
+
 article .utility-icon {
   cursor: default;
 }
 
-/* INTERNSHIPS SECTION */
-#internships-section {
-  position: relative;
-}
-
-/* PROJECTS SECTION */
-#projects-section {
-  position: relative;
-}
-
-/* CERTIFICATIONS SECTION */
+/* INTERNSHIPS, PROJECTS, CERTIFICATIONS SECTIONS */
+#internships-section,
+#projects-section,
 #certifications-section {
   position: relative;
 }
 
 .card-background {
-  border-color: rgb(163, 163, 163);
-  background: rgb(255, 255, 255);
-  /* --- MODIFIED/ADDED FOR BUTTON ALIGNMENT --- */
+  border-color: #555; /* Darker border for card background */
+  background: #2a2a2a; /* Darker background for card background */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* This pushes the content to the top and buttons to the bottom */
-  /* --- END MODIFIED/ADDED --- */
+  justify-content: space-between;
 }
 
 .project-thumbnail {
   border-radius: 1rem;
-  border: 1.5px solid rgb(163, 163, 163);
+  border: 1.5px solid #555; /* Darker border for project thumbnails */
   width: 90%;
   height: 90%;
 }
 
 .project-card-title {
   margin: 1rem;
-  color: black;
+  color: #e0e0e0; /* Light text for project card titles */
 }
 
 .project-button {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: #e0e0e0; /* Light text for project buttons */
+  border-color: #555; /* Darker border for project buttons */
 }
 
-/* Specific styling for description content within cards */
 .internship-description {
     padding: 0 10px;
     margin-top: 0.5rem;
 }
 
 .internship-description ul {
-    list-style-type: none; /* Removed bullet points */
-    padding: 0; /* Removed all padding */
-    margin: 0; /* Removed all margin */
-    text-align: center; /* Centered the text within the list */
-    color: rgb(85, 85, 85);
-    width: 100%; /* Ensure it takes full width */
-    box-sizing: border-box; /* Include padding in width calculation */
+    list-style-type: style type;;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #b0b0b0; /* Lighter grey for internship description text */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .internship-description li {
+    text-align: justify;
+    width: 100%;
     margin-bottom: 5px;
-    padding: 0 10px; /* Added horizontal padding for spacing */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
-    width: 100%; /* Ensure it takes full width */
-    text-align: center; /* Centered the text within each list item */
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .internship-description p {
     text-align: left;
-    color: rgb(85, 85, 85);
+    color: #b0b0b0; /* Lighter grey for internship description text */
     font-size: 0.95rem;
     line-height: 1.4;
 }
 
-/* --- NEW RULE FOR INTERNSHIP DATE/LOCATION --- */
 .internship-date-location {
-    font-weight: 600; /* Bolder text */
-    color: rgb(50, 50, 50); /* Darker grey */
-    font-size: 1rem; /* Slightly larger size */
-    margin-top: 0.5rem; /* Add some top margin for separation */
-    margin-bottom: 1rem; /* Add some bottom margin for separation */
-    text-align: center; /* Ensure it's centered */
+    font-weight: 600;
+    color: #e0e0e0; /* Light text for internship date/location */
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
-/* --- END NEW RULE --- */
 
-
-/* CONTACT */
-
+/* CONTACT SECTION */
 #contact-section {
   display: flex;
   justify-content: center;
@@ -480,9 +483,9 @@ article .utility-icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: #555 0.1rem solid; /* Darker border for contact details */
+  border-color: #555; /* Darker border color */
+  background: #2a2a2a; /* Darker background */
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -497,6 +500,7 @@ article .utility-icon {
 
 .contact-item p {
   font-size: larger;
+  color: #e0e0e0; /* Light text for contact items */
 }
 
 .contact-utility-icon {
@@ -508,7 +512,6 @@ article .utility-icon {
 }
 
 /* FOOTER SECTION */
-
 footer {
   height: 26vh;
   margin: 0 1rem;
@@ -516,22 +519,23 @@ footer {
 
 footer p {
   text-align: center;
+  color: #b0b0b0; /* Lighter grey for footer text */
 }
 
-/* --- NEW/MOVED RULES FOR UNIFORM END-TO-END FORMATTING --- */
+/* UNIFORM END-TO-END FORMATTING */
 .text-container {
   text-align: justify;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%;
 }
 
-.info-card .button-group p { /* Target paragraph in certifications */
+.info-card .button-group p {
   text-align: justify;
   width: 100%;
-  padding: 0 10px; /* Add some horizontal padding */
-  box-sizing: border-box; /* Include padding in width calculation */
+  padding: 0 10px;
+  box-sizing: border-box;
 }
-/* --- END NEW/MOVED RULES --- */
 
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 1400px) {
   #profile-section {
@@ -603,10 +607,10 @@ footer p {
     margin-bottom: 2rem;
   }
   .about-info-cards,
-  .button-group { /* Removed .contact-details-wrapper from here */
+  .button-group {
     flex-wrap: wrap;
   }
-  .contact-details-wrapper { /* Added specific rule for contact-details-wrapper */
+  .contact-details-wrapper {
     flex-direction: column;
   }
   .contact-item {
@@ -639,14 +643,12 @@ footer p {
     font-size: 2rem;
   }
 
-  /* --- MODIFIED RULES FOR VERTICAL STACKING BELOW 600px --- */
-  /* Target the .about-info-cards directly within these sections */
+  /* Rules for vertical stacking of cards below 600px */
   #projects-section .about-info-cards,
   #certifications-section .about-info-cards,
   #internships-section .about-info-cards,
   #skills-section .about-info-cards {
     flex-direction: column;
-    align-items: center; /* Centers the stacked cards */
+    align-items: center;
   }
-  /* --- END MODIFIED RULES --- */
 }
