@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- Desktop Navigation -->
+    <nav id="main-navigation">
+      <div class="logo">Laraib Anwar</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#internships-section">Internships</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#certifications-section">Certifications</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hamburger/Mobile Navigation -->
+    <nav id="mobile-navigation">
+      <div class="logo">Laraib Anwar</div>
+      <div class="mobile-menu-container">
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mobile-menu-links">
+          <ul>
+            <li><a href="#about-section" onclick="toggleMenu()">About</a></li>
+            <li><a href="#skills-section" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#internships-section" onclick="toggleMenu()">Internships</a></li>
+            <li><a href="#projects-section" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#certifications-section" onclick="toggleMenu()">Certifications</a></li>
+            <li><a href="#contact-section" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile-section">
+      <div class="profile-picture-container">
+        <img style="border-radius: 50%;" src="./assets/profile-pic.png" alt="Laraib's profile picture" />
+      </div>
+      <div class="profile-text-content">
+        <p class="greeting-text">Hello, I'm</p>
+        <h1 class="title">Laraib Anwar</h1>
+        <p class="role-text">Full Stack Developer</p>
+        <div class="button-group">
+          <button
+            class="action-button secondary-button"
+            onclick="window.open('./assets/Laraib Anwar Resume.pdf')"
+          >
+            Resume
+          </button>
+          <button class="action-button primary-button" onclick="location.href='#contact-section'">
+            Contact Info
+          </button>
+        </div>
+        <div id="social-links-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="utility-icon"
+            onclick="location.href='https://linkedin.com/in/laraibanwr/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="utility-icon"
+            onclick="location.href='https://github.com/laraibanwr'"
+          />
+          <img
+            src="./assets/leetcode.png"
+            alt="My Leetcode profile"
+            onclick="location.href='https://leetcode.com/u/laraibanwr/'"
+            class="utility-icon"
+          />
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about-section">
+      <p class="greeting-text">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="profile-picture-container">
+          <img
+            src="./assets/about.png"
+            alt="Profile picture"
+            class="about-section-image"
+          />
+        </div>
+        <div class="about-details-wrapper">
+          <div class="about-info-cards">
+            <div class="info-card">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="utility-icon"
+              />
+              <h3>Experience</h3>
+              <p>Strong Foundational<br />Full Stack Development</p>
+            </div>
+            <div class="info-card">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="utility-icon"
+              />
+              <h3>Education</h3>
+              <p>Bachelor of Engineering<br>Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am a passionate Computer Science professional, having completed my B.Tech in Computer Science and Engineering (CSE). My primary interest lies in full stack development, where I enjoy building both robust backends and dynamic, user-friendly frontends. With a solid foundation in programming and a keen understanding of system architecture, I strive to create seamless and efficient web applications from end to end.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="utility-icon scroll-arrow-icon"
+        onclick="location.href='#skills-section'"
+      />
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills-section">
+      <p class="greeting-text">Explore My</p>
+      <h1 class="title">Technical Skills</h1>
+      <div class="skills-details-wrapper">
+        <div class="about-info-cards">
+          <div class="info-card">
+            <h2 class="section-subtitle">Frontend Development</h2>
+            <div class="skill-items-grid">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>HTML5</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>CSS3</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>Tailwind</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>React JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>Redux</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="info-card">
+            <h2 class="section-subtitle">Backend Development</h2>
+            <div class="skill-items-grid">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>Spring Boot</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>Hibernate</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="utility-icon"
+                />
+                <div>
+                  <h3>MongoDB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="utility-icon scroll-arrow-icon"
+        onclick="location.href='#internships-section'"
+      />
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships-section">
+        <p class="greeting-text">My Professional</p>
+        <h1 class="title">Internship Experience</h1>
+        <div class="skills-details-wrapper">
+            <div class="about-info-cards">
+                <div class="info-card card-background">
+                    <h2 class="section-subtitle project-card-title">Full Stack Development Intern<br>@ Unified Mentor</h2>
+                    <p class="internship-date-location">Sep 2024 - Jan 2025 | Haryana, India</p>
+                    <div class="internship-description">
+                        <ul class="list-disc list-inside text-left text-sm text-gray-700">
+                            <li>Developed and deployed 3+ full-stack web applications using the MERN stack.</li>
+                            <li>Designed and implemented efficient backend APIs for optimized data handling and user experience.</li>
+                            <li>Integrated Stripe and Razorpay for secure online payments, processing over 100 transactions/month.</li>
+                            <li>Collaborated using Git for version control, ensuring smooth codebase updates and feature integration.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card card-background">
+                    <h2 class="section-subtitle project-card-title">Backend Development Intern<br>@ Filo Edtech</h2>
+                    <p class="internship-date-location">Feb 2025 - Apr 2025 | Haryana, India</p>
+                    <div class="internship-description">
+                        <ul class="list-disc list-inside text-left text-sm text-gray-700">
+                            <li>Built RESTful APIs with Spring Boot for student registration & course enrollment.</li>
+                            <li>Implemented data persistence using MySQL and Spring Data JPA for complex entity relationships.</li>
+                            <li>Ensured API reliability and data integrity through comprehensive Postman testing.</li>
+                            <li>Managed advanced Git workflows, including conflict resolution and feature branch maintenance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="utility-icon scroll-arrow-icon"
+            onclick="location.href='#projects-section'"
+        />
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects-section">
+      <p class="greeting-text">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="skills-details-wrapper">
+        <div class="about-info-cards">
+          <div class="info-card card-background">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-thumbnail"
+              />
+            </div>
+            <h2 class="section-subtitle project-card-title">Peer-to-Peer Learning Platform</h2>
+            <div class="button-group">
+              <button
+                class="action-button secondary-button project-button"
+                onclick="location.href='https://github.com/laraibanwr/SkillSwap'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="info-card card-background">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-thumbnail"
+              />
+            </div>
+            <h2 class="section-subtitle project-card-title">AI Image Generator</h2>
+            <div class="button-group">
+              <button
+                class="action-button secondary-button project-button"
+                onclick="location.href='https://github.com/laraibanwr/Pixilence'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="info-card card-background">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-thumbnail"
+              />
+            </div>
+            <h2 class="section-subtitle project-card-title">Hotel Booking Platform</h2>
+            <div class="button-group">
+              <button
+                class="action-button secondary-button project-button"
+                onclick="location.href='https://github.com/laraibanwr/LR-Cube'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="utility-icon scroll-arrow-icon"
+        onclick="location.href='#certifications-section'"
+      />
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications-section">
+      <p class="greeting-text">Browse My Recent</p>
+      <h1 class="title">Certifications</h1>
+      <div class="skills-details-wrapper">
+        <div class="about-info-cards">
+          <div class="info-card card-background">
+            <div class="article-container">
+              <img
+                src="./assets/Java-Scaler.png"
+                alt="Java Scaler Certification"
+                class="project-thumbnail"
+              />
+            </div>
+            <h2 class="section-subtitle project-card-title">Java: Scaler</h2>
+            <div class="button-group">
+              <p>Completed a comprehensive Java & Spring Boot Certification from Scaler, solidifying my expertise in modern backend development.</p>
+            </div>
+          </div>
+          <div class="info-card card-background">
+            <div class="article-container">
+              <img
+                src="./assets/Spring-Boot-Scaler.png"
+                alt="Spring Boot Scaler Certification"
+                class="project-thumbnail"
+              />
+            </div>
+            <h2 class="section-subtitle project-card-title">Spring Boot: Scaler</h2>
+            <div class="button-group">
+              <p>Gained expertise in Spring Boot through a dedicated certification from Scaler, mastering its use for building scalable and efficient backend services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="utility-icon scroll-arrow-icon"
+        onclick="location.href='#contact-section'"
+      />
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+      <p class="greeting-text">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-details-wrapper">
+        <div class="contact-item">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="utility-icon contact-utility-icon email-utility-icon"
+          />
+          <p><a href="mailto:laraibanwar11@gmail.com">laraibanwar11@gmail.com</a></p>
+        </div>
+        <div class="contact-item">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="utility-icon contact-utility-icon"
+          />
+          <p><a href="https://linkedin.com/in/laraibanwr/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <nav>
+        <div class="footer-nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#internships-section">Internships</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#certifications-section">Certifications</a></li>
+            <li><a href="#contact-section">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Laraib Anwar. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,652 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.action-button {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#mobile-navigation {
+  display: none;
+}
+
+.mobile-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mobile-menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.mobile-menu-links.open {
+  /* Increased max-height to ensure all links are visible */
+  max-height: 400px; /* Adjusted from 300px to 400px */
+  opacity: 1;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.mobile-menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.mobile-menu-links li {
+  list-style: none;
+}
+
+/* This rule is redundant with the one above, but keeping for consistency if it was intended to override something */
+.mobile-menu-links.open {
+  max-height: 400px; /* Ensure consistency with the primary rule */
+}
+
+.menu-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.menu-icon span:first-child {
+  transform: none;
+}
+
+.menu-icon span:first-child {
+  opacity: 1;
+}
+
+.menu-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile-section {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.profile-picture-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.profile-text-content {
+  align-self: center;
+  text-align: center;
+}
+
+.profile-text-content p {
+  font-weight: 600;
+}
+
+.greeting-text {
+  text-align: center;
+}
+
+.role-text {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#social-links-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.utility-icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.action-button {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.primary-button,
+.secondary-button {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  cursor: pointer;
+}
+
+.primary-button,
+.secondary-button:hover {
+  background: rgb(173, 169, 169);
+  color: white;
+  border: none;
+}
+
+.primary-button {
+  background: rgb(53, 53, 53);
+  color: white;
+  border: none;
+}
+
+.primary-button:hover {
+  background: rgb(173, 169, 169);
+  color: black;
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.secondary-button {
+  background: none;
+}
+
+.secondary-button:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+
+}
+
+.button-group {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about-section {
+  position: relative;
+}
+
+.about-info-cards {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-wrapper {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-info-cards,
+.about-details-wrapper {
+  display: flex;
+}
+
+.about-section-image {
+  border-radius: 2rem;
+}
+
+.scroll-arrow-icon {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.info-card {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.profile-picture-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* SKILLS SECTION */
+
+#skills-section {
+  position: relative;
+}
+
+.section-subtitle {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.skills-details-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skill-items-grid {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .utility-icon {
+  cursor: default;
+}
+
+/* INTERNSHIPS SECTION */
+#internships-section {
+  position: relative;
+}
+
+/* PROJECTS SECTION */
+#projects-section {
+  position: relative;
+}
+
+/* CERTIFICATIONS SECTION */
+#certifications-section {
+  position: relative;
+}
+
+.card-background {
+  border-color: rgb(163, 163, 163);
+  background: rgb(255, 255, 255);
+  /* --- MODIFIED/ADDED FOR BUTTON ALIGNMENT --- */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This pushes the content to the top and buttons to the bottom */
+  /* --- END MODIFIED/ADDED --- */
+}
+
+.project-thumbnail {
+  border-radius: 1rem;
+  border: 1.5px solid rgb(163, 163, 163);
+  width: 90%;
+  height: 90%;
+}
+
+.project-card-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-button {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* Specific styling for description content within cards */
+.internship-description {
+    padding: 0 10px;
+    margin-top: 0.5rem;
+}
+
+.internship-description ul {
+    list-style-type: none; /* Removed bullet points */
+    padding: 0; /* Removed all padding */
+    margin: 0; /* Removed all margin */
+    text-align: center; /* Centered the text within the list */
+    color: rgb(85, 85, 85);
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.internship-description li {
+    margin-bottom: 5px;
+    padding: 0 10px; /* Added horizontal padding for spacing */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    width: 100%; /* Ensure it takes full width */
+    text-align: center; /* Centered the text within each list item */
+}
+
+.internship-description p {
+    text-align: left;
+    color: rgb(85, 85, 85);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* --- NEW RULE FOR INTERNSHIP DATE/LOCATION --- */
+.internship-date-location {
+    font-weight: 600; /* Bolder text */
+    color: rgb(50, 50, 50); /* Darker grey */
+    font-size: 1rem; /* Slightly larger size */
+    margin-top: 0.5rem; /* Add some top margin for separation */
+    margin-bottom: 1rem; /* Add some bottom margin for separation */
+    text-align: center; /* Ensure it's centered */
+}
+/* --- END NEW RULE --- */
+
+
+/* CONTACT */
+
+#contact-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-details-wrapper {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-item p {
+  font-size: larger;
+}
+
+.contact-utility-icon {
+  cursor: default;
+}
+
+.email-utility-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* --- NEW/MOVED RULES FOR UNIFORM END-TO-END FORMATTING --- */
+.text-container {
+  text-align: justify;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.info-card .button-group p { /* Target paragraph in certifications */
+  text-align: justify;
+  width: 100%;
+  padding: 0 10px; /* Add some horizontal padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+/* --- END NEW/MOVED RULES --- */
+
+
+@media screen and (max-width: 1400px) {
+  #profile-section {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-info-cards {
+    flex-wrap: wrap;
+  }
+  #contact-section,
+  #projects-section,
+  #internships-section,
+  #certifications-section {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #main-navigation {
+    display: none;
+  }
+  #mobile-navigation {
+    display: flex;
+  }
+  #skills-section,
+  .skills-details-wrapper,
+  #internships-section,
+  #certifications-section {
+    margin-top: 2rem;
+  }
+  #profile-section,
+  .section-container {
+    display: block;
+  }
+  .scroll-arrow-icon {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .profile-picture-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-info-cards {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact-section,
+  footer {
+    height: 40vh;
+  }
+  #profile-section {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-info-cards,
+  .button-group { /* Removed .contact-details-wrapper from here */
+    flex-wrap: wrap;
+  }
+  .contact-details-wrapper { /* Added specific rule for contact-details-wrapper */
+    flex-direction: column;
+  }
+  .contact-item {
+    margin: 0;
+  }
+  .contact-item p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .section-subtitle {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .profile-picture-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .role-text {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+
+  /* --- MODIFIED RULES FOR VERTICAL STACKING BELOW 600px --- */
+  /* Target the .about-info-cards directly within these sections */
+  #projects-section .about-info-cards,
+  #certifications-section .about-info-cards,
+  #internships-section .about-info-cards,
+  #skills-section .about-info-cards {
+    flex-direction: column;
+    align-items: center; /* Centers the stacked cards */
+  }
+  /* --- END MODIFIED RULES --- */
+}
