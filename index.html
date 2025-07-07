@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Desktop Navigation -->
     <nav id="main-navigation">
       <div class="logo">Laraib Anwar</div>
       <div>
@@ -24,10 +23,8 @@
       </div>
     </nav>
 
-    <!-- Hamburger/Mobile Navigation -->
     <nav id="mobile-navigation">
-      <div class="logo">Laraib Anwar</div>
-      <div class="mobile-menu-container">
+    <div class="logo">Laraib Anwar</div> <div class="mobile-menu-container">
         <div class="menu-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -58,13 +55,12 @@
       </div>
     </nav>
 
-    <!-- Profile Section -->
     <section id="profile-section">
       <div class="profile-picture-container">
         <img
-          style="border-radius: 50%"
           src="./assets/profile-pic.png"
           alt="Laraib's profile picture"
+          class="profile-image" 
         />
       </div>
       <div class="profile-text-content">
@@ -108,7 +104,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about-section">
       <p class="greeting-text">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -143,13 +138,7 @@
           </div>
           <div class="text-container">
             <p>
-              I am a passionate Computer Science professional, having completed
-              my B.Tech in Computer Science and Engineering (CSE). My primary
-              interest lies in full stack development, where I enjoy building
-              both robust backends and dynamic, user-friendly frontends. With a
-              solid foundation in programming and a keen understanding of system
-              architecture, I strive to create seamless and efficient web
-              applications from end to end.
+              Hello, I'm a computer science enthusiast with a strong interest in full-stack development, especially in building real-world web applications. I enjoy working across the tech stack—from crafting backend APIs to designing responsive user interfaces. With experience from internships and personal projects, I'm always exploring new tools, solving problems, and aiming to write clean, maintainable code. Let's build something cool together!
             </p>
           </div>
         </div>
@@ -162,7 +151,6 @@
       />
     </section>
 
-    <!-- Skills Section -->
     <section id="skills-section">
       <p class="greeting-text">Explore My</p>
       <h1 class="title">Technical Skills</h1>
@@ -324,7 +312,7 @@
                 />
                 <div>
                   <h3>DSA</h3>
-                  <p>Experienced</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
 
@@ -336,7 +324,7 @@
                 />
                 <div>
                   <h3>OOPs</h3>
-                  <p>Experienced</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -347,7 +335,7 @@
                 />
                 <div>
                   <h3>DBMS</h3>
-                  <p>Experienced</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -422,43 +410,18 @@
       />
     </section>
 
-    <!-- Internships Section -->
     <section id="internships-section">
       <p class="greeting-text">My Professional</p>
       <h1 class="title">Internship Experience</h1>
       <div class="skills-details-wrapper">
         <div class="about-info-cards">
-          <div class="info-card card-background">
+            <div class="info-card card-background">
             <h2 class="section-subtitle project-card-title">
-              Full Stack Development Intern<br />@ Unified Mentor
+              Backend Development Intern<br /><a class="company-link" onclick="window.open('./assets/Filo.pdf')">Filo Edtech</a>
             </h2>
-            <p class="internship-date-location">
-              Sep 2024 - Jan 2025 | Haryana, India
+            <p class="internship-about">
+              Global live tutoring community connecting students with expert tutors instantly.
             </p>
-            <div class="internship-description">
-              <ul class="list-disc list-inside text-left text-sm text-gray-700">
-                <li>
-                  Developed 3+ full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js).
-                </li>
-                <li>
-                  Designed and implemented efficient backend APIs for optimized
-                  data handling and user experience.
-                </li>
-                <li>
-                  Integrated Stripe and Razorpay for secure online payments,
-                  processing over 100 transactions/month.
-                </li>
-                <li>
-                  Collaborated using Git for version control, ensuring smooth
-                  codebase updates and feature integration.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="info-card card-background">
-            <h2 class="section-subtitle project-card-title">
-              Backend Development Intern<br />@ Filo Edtech
-            </h2>
             <p class="internship-date-location">
               Feb 2025 - Apr 2025 | Haryana, India
             </p>
@@ -483,6 +446,36 @@
               </ul>
             </div>
           </div>
+          <div class="info-card card-background">
+            <h2 class="section-subtitle project-card-title">
+              Full Stack Development Intern<br /><a class="company-link" onclick="window.open('./assets/Unified-Mentor.pdf')">Unified Mentor</a>
+            </h2>
+            <p class="internship-about">
+              Edtech platform for skill-building and career readiness via expert mentorship.
+            </p>
+            <p class="internship-date-location">
+              Sep 2024 - Jan 2025 | Haryana, India
+            </p>
+            <div class="internship-description">
+              <ul class="list-disc list-inside text-left text-sm text-gray-700">
+                <li>
+                  Developed 3+ full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js).
+                </li>
+                <li>
+                  Designed and implemented efficient backend APIs for optimized
+                  data handling and user experience.
+                </li>
+                <li>
+                  Integrated Stripe and Razorpay for secure online payments,
+                  processing over 100 transactions/month.
+                </li>
+                <li>
+                  Collaborated using Git for version control, ensuring smooth
+                  codebase updates and feature integration.
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <img
@@ -493,7 +486,6 @@
       />
     </section>
 
-    <!-- Projects Section -->
     <section id="projects-section">
       <p class="greeting-text">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -569,7 +561,6 @@
       />
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications-section">
       <p class="greeting-text">Browse My Recent</p>
       <h1 class="title">Certifications</h1>
@@ -577,11 +568,13 @@
         <div class="about-info-cards">
           <div class="info-card card-background">
             <div class="article-container">
-              <img
-                src="./assets/Java-Scaler.png"
-                alt="Java Scaler Certification"
-                class="project-thumbnail"
-              />
+              <a onclick="window.open('./assets/Java-Scaler.pdf')">
+                <img
+                  src="./assets/Java-Scaler.png"
+                  alt="Java Scaler Certification"
+                  class="certification-thumbnail"
+                />
+              </a>
             </div>
             <h2 class="section-subtitle project-card-title">Java: Scaler</h2>
             <div class="button-group">
@@ -592,11 +585,13 @@
           </div>
           <div class="info-card card-background">
             <div class="article-container">
-              <img
-                src="./assets/Spring-Boot-Scaler.png"
-                alt="Spring Boot Scaler Certification"
-                class="project-thumbnail"
-              />
+              <a onclick="window.open('./assets/Spring-Boot-Scaler.pdf')">
+                <img
+                  src="./assets/Spring-Boot-Scaler.png"
+                  alt="Spring Boot Scaler Certification"
+                  class="certification-thumbnail"
+                />
+              </a>
             </div>
             <h2 class="section-subtitle project-card-title">
               Spring Boot: Scaler
@@ -619,7 +614,6 @@
       />
     </section>
 
-    <!-- Contact Section -->
     <section id="contact-section">
       <p class="greeting-text">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -645,7 +639,6 @@
       </div>
     </section>
 
-    <!-- Footer Section -->
     <footer>
       <nav>
         <div class="footer-nav-links-container">
